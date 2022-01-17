@@ -2,29 +2,17 @@
 
 class Solution:
     def sort012(self,arr,n):
-        # code here
-        zero,one,two= 0,0,0
-        for ele in arr:
-            if ele == 0:
-                zero +=1
-            elif ele == 1:
-                one += 1
+        low,mid,high = 0,0,n-1
+        while mid <= high:
+            if arr[mid] == 0:
+                arr[mid],arr[low] = arr[low],arr[mid]
+                mid+=1
+                low+=1
+            elif arr[mid] == 1:
+                mid+=1
             else:
-                two +=1
-
-        index = 0
-        while zero > 0:
-            arr[index] = 0
-            zero -=1
-            index +=1
-        while one > 0:
-            arr[index] = 1
-            one -=1
-            index +=1
-        while two > 0:
-            arr[index] = 2
-            two -=1
-            index +=1
+                arr[mid],arr[high] = arr[high],arr[mid]
+                high-=1
         
         return arr
         
