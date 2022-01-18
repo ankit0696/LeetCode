@@ -2,8 +2,7 @@
 
 class Solution:
     def maxSubArraySum(self,arr,N):
-        maxSum = 0
-        sum = 0
+        maxSum,sum = arr[0], 0
         for ele in arr:
             sum += ele
             if maxSum < sum:
