@@ -1,6 +1,10 @@
 #User function Template for python3
 
 class Solution:
+    # ele      1 2 3 -7 5 8
+    # maxSum 0 
+    # sum.   0 
+    
     def maxSubArraySum(self,arr,N):
         maxSum,sum = arr[0], 0
         for ele in arr:
@@ -9,11 +13,6 @@ class Solution:
                 maxSum = sum
             if sum < 0:
                 sum = 0
-        if maxSum == 0:
-            maxSum = arr[0]
-            for ele in arr:
-                if ele > maxSum:
-                    maxSum = ele
         return maxSum
         
 #{ 
