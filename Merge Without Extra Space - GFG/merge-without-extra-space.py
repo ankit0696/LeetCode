@@ -2,9 +2,7 @@
 
 class Solution:
     def merge(self, arr1, arr2, n, m): 
-        # code here
         arr = arr1 + arr2
-        # print('before',arr)
         arr.sort()
         i = 0
         while i < n:
